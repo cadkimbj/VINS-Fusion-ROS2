@@ -208,7 +208,7 @@ void readParameters(std::string config_file)
         printf("no imu, fix extrinsic param; no time offset calibration\n");
     }
 
-    fsSettings["global_frame_id"] >> WORLD_FRAME_ID;
+    fsSettings["world_frame_id"] >> WORLD_FRAME_ID;
     WORLD_FRAME_ID.empty()? WORLD_FRAME_ID = "world" : WORLD_FRAME_ID;
     fsSettings["body_frame_id"] >> BODY_FRAME_ID;   
     BODY_FRAME_ID.empty()? BODY_FRAME_ID = "body" : BODY_FRAME_ID;
